@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int roll_no, physics, chemistry, computer_application, total;
+    float percentage;
+    char name[30], division[10];
+    
+    printf("Input the Roll Number of the student: ");
+    scanf("%d", &roll_no);
+    
+    printf("Input the Name of the Student: ");
+    scanf("%s", name);
+    
+    printf("Input the marks of Physics, Chemistry and Computer Application: ");
+    scanf("%d %d %d", &physics, &chemistry, &computer_application);
+    
+    total = physics + chemistry + computer_application;
+    percentage = (float) total / 3;
+    
+    if (percentage >= 60) {
+        strcpy(division, "First");
+    } else if (percentage >= 50) {
+        strcpy(division, "Second");
+    } else if (percentage >= 40) {
+        strcpy(division, "Third");
+    } else {
+        strcpy(division, "Fail");
+    }
+    
+    printf("Roll No: %d\n", roll_no);
+    printf("Name of Student: %s\n", name);
+    printf("Marks in Physics: %d\n", physics);
+    printf("Marks in Chemistry: %d\n", chemistry);
+    printf("Marks in Computer Application: %d\n", computer_application);
+    printf("Total Marks = %d\n", total);
+    printf("Percentage = %.2f\n", percentage);
+    printf("Division = %s\n", division);
+    
+    return 0;
+}
