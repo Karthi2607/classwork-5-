@@ -1,23 +1,16 @@
-#include <stdio.h>
-#include <ctype.h>
-
-int main() {
-    char str[100];
-    int i, j;
-
-    printf("Enter a string: ");
-    fgets(str, 100, stdin);
-
-    // Removing non-alphabetic characters
-    for (i = 0, j = 0; str[i] != '\0'; i++) {
-        if (isalpha(str[i])) {
-            str[j] = str[i];
-            j++;
+#include<stdio.h>
+int main()
+{
+    int sum=0,avg,i,j,row=2,col=2;
+    int matrix[2][2]={{1,2},{2,3}};
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            sum=sum+matrix[i][j];
+            avg=sum/4;
+            
         }
     }
-    str[j] = '\0';
-
-    printf("After removing the Output String: %s", str);
-
+    printf("the sum is %d",sum);
+    printf("\n the average is %d",avg);
     return 0;
 }
