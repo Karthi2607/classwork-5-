@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int i, j;
+
+    printf("Enter a string: ");
+    fgets(str, 100, stdin);
+
+    // Removing non-alphabetic characters
+    for (i = 0, j = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i])) {
+            str[j] = str[i];
+            j++;
+        }
+    }
+    str[j] = '\0';
+
+    printf("After removing the Output String: %s", str);
+
+    return 0;
+}
